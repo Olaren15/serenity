@@ -86,7 +86,7 @@ pub struct Ratelimiter {
     // When futures is implemented, make tasks clear out their respective entry
     // when the 'reset' passes.
     routes: Arc<RwLock<HashMap<Route, Arc<Mutex<Ratelimit>>>>>,
-    token: String,
+    pub token: String,
 }
 
 impl fmt::Debug for Ratelimiter {
